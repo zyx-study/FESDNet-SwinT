@@ -1,0 +1,21 @@
+## A quick demo play for your own data using our pre-trained model, no need to download datasets
+GENERAL:
+  GPU_ID: 0
+  SEED: 123
+  WORKER: 8
+  SAVE_PREFIX: './demo_dir/pc_restore'
+  EXP_NAME: 'exp'
+
+DATA:
+  DEMO_DATASET: ./test # Insert the root of
+
+MODEL:
+  EN_FEATURE_NUM: 48
+  EN_INTER_NUM: 32
+  DE_FEATURE_NUM: 64
+  DE_INTER_NUM: 32
+  SAM_NUMBER: 1
+
+TEST:
+  SAVE_IMG: png # The file type (e.g., png, jpg) for saving the output image; set False to avoid saving
+  LOAD_PATH: './out_dir/FESDNet_SwinT/exp_light/net_checkpoints/checkpoint_000100.tar' # Specify the checkpoint path

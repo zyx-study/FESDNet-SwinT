@@ -1,0 +1,4 @@
+2025-04-20 21:22:16.364032
+load model from ./out_dir/FESDNet_SwinT/exp_light/net_checkpoints/checkpoint_000100.tar
+save image results to ./demo_dir/pc_restore\exp\test_result/customer
+save logger to ./demo_dir/pc_restore\exp\test_result/customer_result.log

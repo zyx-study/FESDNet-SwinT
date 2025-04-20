@@ -1,0 +1,12 @@
+ptflops==0.7.4
+gdown==4.7.1
+lpips==0.1.4
+opencv-python==4.10.0.82
+scikit-image==0.22.0
+thop==0.1.1.post2209072238
+numpy==1.26.4
+pyyaml==6.0.1
+tensorboardx==2.6.2.2
+tqdm==4.66.1
+timm==0.6.13
+torchaudio==2.2.0
