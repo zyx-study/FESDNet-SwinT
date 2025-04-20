@@ -83,20 +83,20 @@ python demo_test.py --config ./demo_config/demo.yaml
 
 ### Quantitative results
 
-| Method                            | Field                       | PSNR↑ | SSIM↑ | LPIPS↓ | Mult-Adds↓| Params (M)↓ | MOS↑ | OCR Accuracy↑ |
-| ------------------------------------- | --------- | --------- | ---------- | --------------- | -------- | ----------------- | ----------------- | ------------------------------------- |
-| Camera-Captured Image                 | -               | 14.22     | 0.550     | 0.469      | - | -               | -        | 0.652             |
-| U-Net      | Image Segmentation | 22.75     | 0.875     | 0.061      | 48.36 G | 28.95     | 3        | 0.520             |
-| MDDM            | Image Demoiréing | 19.13     | 0.766     | 0.240      | 27.65 G  | 3.58       | 5        | 0.523             |
-| ESDNet | Image Demoiréing | 27.07 | 0.918 | 0.051 | 17.63 G | 5.93 | 7 | 0.895 |
-| MGCN | Image Demoiréing | 24.93 | 0.911 | 0.045 | 53.64 G | 5.66 | 8 | 0.864 |
-| SRCNN | Image Super-Resolution          | 19.30     | 0.822     | 0.335      | 4.55 G    | 0.07        | 3        | 0.250             |
-| VDSR        | Image Super-Resolution          | 18.11     | 0.715     | 0.143      | 7.52 G   | 0.11        | 4        | 0.696             |
-| SwinIR | Image Super-Resolution | 19.64 | 0.765 | 0.271 | 57.99 G | 0.91 | 4 | 0.783 |
-| SRN-DeblurNet    | Image Deblurring | 22.56     | 0.861     | 0.157      | 108.66 G | 10.25      | 4        | 0.438             |
-| DeblurGanv2 | Image Deblurring | 16.65     | 0.658     | 0.172      | 25.61 G  | 5.09 | 4        | 0.389             |
-| MISCFilter | Image Deblurring | 26.31 | 0.901 | 0.060 | 2.34 G | 15.99 | 8 | 0.891 |
-| FESDNet-SwinT (Ours)            | Comprehensive Image Restoration | 28.34 | 0.933 | 0.044  | 19.1 G   | 6.52       | 9    | 0.904         |
+| Method                            | Field                       | PSNR↑ | SSIM↑ | LPIPS↓ | Mult-Adds (G)↓ | Params (M)↓ | MOS↑ | OCR Accuracy↑ |
+| ------------------------------------- | --------- | --------- | ---------- | --------------- |------------| ----------------- | ----------------- | ------------------------------------- |
+| Camera-Captured Image                 | -               | 14.22     | 0.550     | 0.469      | -          | -               | -        | 0.652             |
+| U-Net      | Image Segmentation | 22.75     | 0.875     | 0.061      | 48.36    | 28.95     | 3        | 0.520             |
+| MDDM            | Image Demoiréing | 19.13     | 0.766     | 0.240      | 27.65    | 3.58       | 5        | 0.523             |
+| ESDNet | Image Demoiréing | 27.07 | 0.918 | 0.051 | 17.63    | 5.93 | 7 | 0.895 |
+| MGCN | Image Demoiréing | 24.93 | 0.911 | 0.045 | 53.64    | 5.66 | 8 | 0.864 |
+| SRCNN | Image Super-Resolution          | 19.30     | 0.822     | 0.335      | 4.55     | 0.07        | 3        | 0.250             |
+| VDSR        | Image Super-Resolution          | 18.11     | 0.715     | 0.143      | 7.52       | 0.11        | 4        | 0.696             |
+| SwinIR | Image Super-Resolution | 19.64 | 0.765 | 0.271 | 57.99    | 0.91 | 4 | 0.783 |
+| SRN-DeblurNet    | Image Deblurring | 22.56     | 0.861     | 0.157      | 108.66    | 10.25      | 4        | 0.438             |
+| DeblurGanv2 | Image Deblurring | 16.65     | 0.658     | 0.172      | 25.61    | 5.09 | 4        | 0.389             |
+| MISCFilter | Image Deblurring | 26.31 | 0.901 | 0.060 | 2.34     | 15.99 | 8 | 0.891 |
+| FESDNet-SwinT (Ours)            | Comprehensive Image Restoration | 28.34 | 0.933 | 0.044  | 19.10    | 6.52       | 9    | 0.904         |
 
 ### Subjective results
 
