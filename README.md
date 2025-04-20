@@ -11,7 +11,7 @@ We propose a novel deep learning-based image restoration framework, FESDNet-Swin
 
 The image captured by industrial cameras for UI automated testing often exhibits issues, e.g., low resolution, moiré patterns, and blur.
 
-<p align="center"> <img src="./figures/ActualProblem.png" width="60%"> </p>
+<p align="center"> <img src="./figures/ActualProblem.jpg" width="80%"> </p>
 
 ## Environments
 
@@ -100,7 +100,7 @@ python demo_test.py --config ./demo_config/demo.yaml
 
 ### Subjective results
 
-<p align="center"> <img src="./figures/ModelShow2.png" width="90%"> </p>
+<p align="center"> <img src="./figures/ModelShow2.jpg" width="90%"> </p>
 
 ## References
 
