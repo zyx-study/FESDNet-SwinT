@@ -89,7 +89,7 @@ python demo_test.py --config ./demo_config/demo.yaml
 | U-Net      | Image Segmentation | 22.75     | 0.875     | 0.061      | 48.36    | 28.95     | 3        | 0.520             |
 | MDDM            | Image Demoiréing | 19.13     | 0.766     | 0.240      | 27.65    | 3.58       | 5        | 0.523             |
 | ESDNet | Image Demoiréing | 27.07 | 0.918 | 0.051 | 17.63    | 5.93 | 7 | 0.895 |
-| MGCN | Image Demoiréing | 24.93 | 0.911 | 0.045 | 53.64    | 5.66 | 8 | 0.864 |
+| MGCN | Image Demoiréing | 24.93 | 0.911 | 0.045 | 53.64    | 5.66 | 8 | 0.884 |
 | SRCNN | Image Super-Resolution          | 19.30     | 0.822     | 0.335      | 4.55     | 0.07        | 3        | 0.250             |
 | VDSR        | Image Super-Resolution          | 18.11     | 0.715     | 0.143      | 7.52       | 0.11        | 4        | 0.696             |
 | SwinIR | Image Super-Resolution | 19.64 | 0.765 | 0.271 | 57.99    | 0.91 | 4 | 0.783 |
