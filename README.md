@@ -29,7 +29,7 @@ pip install torch==2.2.0 torchvision==0.17.0 --index-url https://download.pytorc
 pip install -r requirements.txt
 ```
 
-Our implementation has been tested on NVIDIA 4080 GPU with cuda 11.8.
+Our implementation has been trained on NVIDIA 4080 GPU with cuda 11.8.
 
 ## Train and Test
 
@@ -83,20 +83,20 @@ python demo_test.py --config ./demo_config/demo.yaml
 
 ### Quantitative results
 
-| Method                            | Field                       | PSNR↑ | SSIM↑ | LPIPS↓ | Mult-Adds (G)↓ | Params (M)↓ | MOS↑ | OCR Accuracy↑ |
-| ------------------------------------- | --------- | --------- | ---------- | --------------- |------------| ----------------- | ----------------- | ------------------------------------- |
-| Camera-Captured Image                 | -               | 14.22     | 0.550     | 0.469      | -          | -               | -        | 0.652             |
-| U-Net      | Image Segmentation | 22.75     | 0.875     | 0.061      | 48.36    | 28.95     | 3        | 0.520             |
-| MDDM            | Image Demoiréing | 19.13     | 0.766     | 0.240      | 27.65    | 3.58       | 5        | 0.523             |
-| ESDNet | Image Demoiréing | 27.07 | 0.918 | 0.051 | 17.63    | 5.93 | 7 | 0.895 |
-| MGCN | Image Demoiréing | 24.93 | 0.911 | 0.045 | 53.64    | 5.66 | 8 | 0.884 |
-| SRCNN | Image Super-Resolution          | 19.30     | 0.822     | 0.335      | 4.55     | 0.07        | 3        | 0.250             |
-| VDSR        | Image Super-Resolution          | 18.11     | 0.715     | 0.143      | 7.52       | 0.11        | 4        | 0.696             |
-| SwinIR | Image Super-Resolution | 19.64 | 0.765 | 0.271 | 57.99    | 0.91 | 4 | 0.783 |
-| SRN-DeblurNet    | Image Deblurring | 22.56     | 0.861     | 0.157      | 108.66    | 10.25      | 4        | 0.438             |
-| DeblurGanv2 | Image Deblurring | 16.65     | 0.658     | 0.172      | 25.61    | 5.09 | 4        | 0.389             |
-| MISCFilter | Image Deblurring | 24.31 | 0.875 | 0.082 | 2.34     | 15.99 | 8 | 0.891 |
-| FESDNet-SwinT (Ours)            | Comprehensive Image Restoration | 28.34 | 0.933 | 0.044  | 19.10    | 6.52       | 9    | 0.904         |
+| Method                            | Field                       | PSNR↑ | SSIM↑ | LPIPS↓ | Time↓ | Mult-Adds↓ | Params↓ | MOS↑ | OCR Accuracy↑ |
+| ------------------------------------- | --------- | --------- | ---------- | --------------- |------------| ----------------- | ----------------- | ------------------------------------- | ------------------------------------- |
+| Camera-Captured Image                 | -               | 14.22     | 0.550     | 0.469      | -     | -          | -               | -        | 0.652             |
+| U-Net      | Image Segmentation | 22.75     | 0.875     | 0.061      | 2.35 ms | 48.36 G  | 28.95 M | 3        | 0.520             |
+| MDDM            | Image Demoiréing | 19.13     | 0.766     | 0.240      | 14.16 ms | 27.65 G  | 3.58 M     | 5        | 0.523             |
+| ESDNet | Image Demoiréing | 27.07 | 0.918 | 0.051 | 12.58 ms | 17.63 G  | 5.93 M | 7 | 0.895 |
+| MGCN | Image Demoiréing | 24.93 | 0.911 | 0.045 | 25.61 ms | 53.64 G  | 5.66 M | 8 | 0.884 |
+| SRCNN | Image Super-Resolution          | 19.30     | 0.822     | 0.335      | 0.23 ms | 4.55 G   | 0.07 M      | 3        | 0.250             |
+| VDSR        | Image Super-Resolution          | 18.11     | 0.715     | 0.143      | 0.33 ms | 7.52 G     | 0.11 M      | 4        | 0.696             |
+| SwinIR | Image Super-Resolution | 19.64 | 0.765 | 0.271 | 64.64 ms | 57.99 G  | 0.91 M | 4 | 0.783 |
+| SRN-DeblurNet    | Image Deblurring | 22.56     | 0.861     | 0.157      | 14.91 ms | 108.66 G  | 10.25 M    | 4        | 0.438             |
+| DeblurGanv2 | Image Deblurring | 16.65     | 0.658     | 0.172      | 20.65 ms | 25.61 G  | 5.09 M | 4        | 0.389             |
+| MISCFilter | Image Deblurring | 24.31 | 0.875 | 0.082 | 53.42 ms | 2.34 G   | 15.99 M | 8 | 0.891 |
+| FESDNet-SwinT (Ours)            | Comprehensive Image Restoration | 28.34 | 0.933 | 0.044  | 17.59 ms | 19.10 G  | 6.52 M     | 9    | 0.904         |
 
 ### Subjective results
 
