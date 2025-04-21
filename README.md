@@ -29,7 +29,7 @@ pip install torch==2.2.0 torchvision==0.17.0 --index-url https://download.pytorc
 pip install -r requirements.txt
 ```
 
-Our implementation has been tested on one NVIDIA 4080 GPU with cuda 11.8.
+Our implementation has been tested on NVIDIA 4080 GPU with cuda 11.8.
 
 ## Train and Test
 
