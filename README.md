@@ -95,7 +95,7 @@ python demo_test.py --config ./demo_config/demo.yaml
 | SwinIR | Image Super-Resolution | 19.64 | 0.765 | 0.271 | 57.99    | 0.91 | 4 | 0.783 |
 | SRN-DeblurNet    | Image Deblurring | 22.56     | 0.861     | 0.157      | 108.66    | 10.25      | 4        | 0.438             |
 | DeblurGanv2 | Image Deblurring | 16.65     | 0.658     | 0.172      | 25.61    | 5.09 | 4        | 0.389             |
-| MISCFilter | Image Deblurring | 26.31 | 0.901 | 0.060 | 2.34     | 15.99 | 8 | 0.891 |
+| MISCFilter | Image Deblurring | 24.31 | 0.875 | 0.082 | 2.34     | 15.99 | 8 | 0.891 |
 | FESDNet-SwinT (Ours)            | Comprehensive Image Restoration | 28.34 | 0.933 | 0.044  | 19.10    | 6.52       | 9    | 0.904         |
 
 ### Subjective results
