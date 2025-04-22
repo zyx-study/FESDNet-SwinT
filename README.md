@@ -92,7 +92,7 @@ python demo_test.py --config ./demo_config/demo.yaml
 | MGCN | Image Demoiréing | 24.93 | 0.911 | 0.045 | 25.61 ms | 53.64 G  | 5.66 M | 8 | 0.884 |
 | SRCNN | Image Super-Resolution          | 19.30     | 0.822     | 0.335      | 0.23 ms | 4.55 G   | 0.07 M      | 3        | 0.250             |
 | VDSR        | Image Super-Resolution          | 18.11     | 0.715     | 0.143      | 0.33 ms | 7.52 G     | 0.11 M      | 4        | 0.696             |
-| SwinIR | Image Super-Resolution | 19.64 | 0.765 | 0.271 | 64.64 ms | 57.99 G  | 0.91 M | 4 | 0.783 |
+| SwinIR | Image Super-Resolution | 19.64 | 0.765 | 0.271 | 64.64 ms | 57.99 G  | 0.91 M | 4 | 0.683 |
 | SRN-DeblurNet    | Image Deblurring | 22.56     | 0.861     | 0.157      | 14.91 ms | 108.66 G  | 10.25 M    | 4        | 0.438             |
 | DeblurGanv2 | Image Deblurring | 16.65     | 0.658     | 0.172      | 20.65 ms | 25.61 G  | 5.09 M | 4        | 0.389             |
 | MISCFilter | Image Deblurring | 24.31 | 0.875 | 0.082 | 53.42 ms | 2.34 G   | 15.99 M | 8 | 0.891 |
