@@ -86,7 +86,7 @@ python demo_test.py --config ./demo_config/demo.yaml
 | Method                            | Field                       | PSNR↑ | SSIM↑ | LPIPS↓ | Time↓ | Mult-Adds↓ | Params↓ | MOS↑ | OCR Accuracy↑ |
 | ------------------------------------- | --------- | --------- | ---------- | --------------- |------------| ----------------- | ----------------- | ------------------------------------- | ------------------------------------- |
 | Camera-Captured Image                 | -               | 14.22     | 0.550     | 0.469      | -     | -          | -               | -        | 0.652             |
-| U-Net      | Image Segmentation | 22.75     | 0.875     | 0.061      | 2.35 ms | 48.36 G  | 28.95 M | 3        | 0.520             |
+| U-Net      | Image Restoration Base Model | 22.75     | 0.875     | 0.061      | 2.35 ms | 48.36 G  | 28.95 M | 3        | 0.520             |
 | MDDM            | Image Demoiréing | 19.13     | 0.766     | 0.240      | 14.16 ms | 27.65 G  | 3.58 M     | 5        | 0.523             |
 | ESDNet | Image Demoiréing | 27.07 | 0.918 | 0.051 | 12.58 ms | 17.63 G  | 5.93 M | 7 | 0.895 |
 | MGCN | Image Demoiréing | 24.93 | 0.911 | 0.045 | 25.61 ms | 53.64 G  | 5.66 M | 8 | 0.884 |
