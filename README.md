@@ -1,11 +1,5 @@
 # Comprehensive Image Restoration for Robot-Assisted PC-Side UI Automated Testing using FESDNet-SwinT
 
-## :hourglass_flowing_sand: To Do
-- [x] Release training code
-- [x] Release testing code
-- [x] Release dataset
-- [x] Release pre-trained models
-
 ## Introduction
 We propose a novel deep learning-based image restoration framework, FESDNet-SwinT, tailored for robot-assisted automated testing of PC-side user interfaces (UIs). The method addresses the compounded challenges of screen image degradation, including moiré patterns, low resolution, and blurring. By integrating high-frequency enhancement modules with Swin Transformer architectures, FESDNet-SwinT effectively restores fine details and structural fidelity. We introduce PC-Restore, a large-scale dataset comprising 94,675 degraded/clean image pairs, specifically designed to empower models with robust generalization capabilities for real-world UI scenarios. Furthermore, we establish an Optical Character Recognition (OCR)-based evaluation method to objectively assess restoration performance, particularly in text-rich UI images. Experimental results demonstrate that FESDNet-SwinT achieves state-of-the-art performance, with PSNR of 28.34, SSIM of 0.933, LPIPS of 0.044, and OCR accuracy of 90.4%. This comprehensive solution ensures high-quality image restoration while maintaining real-time performance, making it highly suitable for diverse UI automated testing applications.
 
@@ -35,22 +29,13 @@ Our implementation has been trained on NVIDIA 4080 GPU with cuda 11.8.
 
 Once you have installed all dependencies, you can try a quick test:
 
-### 1. Download our dataset (Original images of training set and validation set)
+### 1. Download our dataset
 
 We provide our PC-Restore dataset, which can be downloaded through the following links:
 
-[Baidu Cloud Link](https://pan.baidu.com/s/12DqsU2CS7KTFmJ0c-hyeCg) Extraction Code: 9s3j
+[Baidu Cloud Link](https://pan.baidu.com/s/1Wfr-Qza63XiGCg4a8HfOAA) Extraction Code: r6bz 
 
-
-### 2. Download our pre-trained model
-
-We provide pre-trained models on PC-Restore datasets, which can be downloaded through the following links:
-
-[Baidu Cloud Link](https://pan.baidu.com/s/1ZPqJdgWGtkZY10nNeeQ_Ig) Extraction Code: upcp 
-
-After downloading the pre-trained model, you can place it in the `./out_dir/FESDNet_SwinT/exp_light/net_checkpoints/` directory.
-
-### 3. Train our dataset:
+### 2. Training
 
 Before running the `train.py`, make sure to modify the TRAIN_DATASET and TEST_DATASET paths in the pc_restore.yaml file to point to the correct dataset locations on your system. To train a model from scratch, simply run:
 
@@ -58,15 +43,15 @@ Before running the `train.py`, make sure to modify the TRAIN_DATASET and TEST_DA
 python train.py --config ./configs/pc_restore.yaml
 ```
 
-### 4. Test our dataset:
+### 3. Testing
 
-To evaluate our dataset, simply run:
+To evaluate dataset, simply run:
 
 ```cmd
 python test.py --config ./configs/pc_restore.yaml
 ```
 
-### 5. Test the images in a folder
+### 4. Test the images in a folder
 
 Change the configuration file `./demo_config/demo.yaml`, and then simply run:
 
@@ -186,7 +171,3 @@ python demo_test.py --config ./demo_config/demo.yaml
 ## Acknowledgements
 
 This model is based on the work of [Xin Yu et al.](https://github.com/CVMI-Lab/UHDM), whose contributions greatly inspired and influenced the improvements made in this project. Special thanks for their original work and ideas.
-
-## Contact
-
-If you have any questions, you can email me (yunxzhu37@163.com).
