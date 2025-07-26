@@ -27,15 +27,7 @@ Our implementation has been trained on NVIDIA 4080 GPU with cuda 11.8.
 
 ## Train and Test
 
-Once you have installed all dependencies, you can try a quick test:
-
-### 1. Download our dataset
-
-We provide our PC-Restore dataset, which can be downloaded through the following links:
-
-[Baidu Cloud Link](https://pan.baidu.com/s/1Wfr-Qza63XiGCg4a8HfOAA) Extraction Code: r6bz 
-
-### 2. Training
+### 1. Training
 
 Before running the `train.py`, make sure to modify the TRAIN_DATASET and TEST_DATASET paths in the pc_restore.yaml file to point to the correct dataset locations on your system. To train a model from scratch, simply run:
 
@@ -43,7 +35,7 @@ Before running the `train.py`, make sure to modify the TRAIN_DATASET and TEST_DA
 python train.py --config ./configs/pc_restore.yaml
 ```
 
-### 3. Testing
+### 2. Testing
 
 To evaluate dataset, simply run:
 
@@ -51,7 +43,7 @@ To evaluate dataset, simply run:
 python test.py --config ./configs/pc_restore.yaml
 ```
 
-### 4. Test the images in a folder
+### 3. Test the images in a folder
 
 Change the configuration file `./demo_config/demo.yaml`, and then simply run:
 
