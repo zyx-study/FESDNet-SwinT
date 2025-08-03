@@ -35,11 +35,11 @@ Our implementation has been trained on NVIDIA 4080 GPU with cuda 11.8.
 
 Once you have installed all dependencies, you can try a quick test:
 
-### 1. Download our dataset (Original images of training set and validation set)
+### 1. Download our dataset
 
 We provide our PC-Restore dataset, which can be downloaded through the following links:
 
-[Baidu Cloud Link](https://pan.baidu.com/s/12DqsU2CS7KTFmJ0c-hyeCg) Extraction Code: 9s3j
+[Baidu Cloud Link](https://pan.baidu.com/s/1Wfr-Qza63XiGCg4a8HfOAA) Extraction Code: r6bz
 
 
 ### 2. Download our pre-trained model
@@ -186,7 +186,3 @@ python demo_test.py --config ./demo_config/demo.yaml
 ## Acknowledgements
 
 This model is based on the work of [Xin Yu et al.](https://github.com/CVMI-Lab/UHDM), whose contributions greatly inspired and influenced the improvements made in this project. Special thanks for their original work and ideas.
-
-## Contact
-
-If you have any questions, you can email me (yunxzhu37@163.com).
