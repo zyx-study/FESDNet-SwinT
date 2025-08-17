@@ -1,11 +1,5 @@
 # Comprehensive Image Restoration for Robot-Assisted PC-Side UI Automated Testing using FESDNet-SwinT
 
-## :hourglass_flowing_sand: To Do
-- [x] Release training code
-- [x] Release testing code
-- [x] Release dataset
-- [x] Release pre-trained models
-
 ## Introduction
 We propose a novel deep learning-based image restoration framework, FESDNet-SwinT, tailored for robot-assisted automated testing of PC-side user interfaces (UIs). The method addresses the compounded challenges of screen image degradation, including moiré patterns, low resolution, and blurring. By integrating high-frequency enhancement modules with Swin Transformer architectures, FESDNet-SwinT effectively restores fine details and structural fidelity. We introduce PC-Restore, a large-scale dataset comprising 94,675 degraded/clean image pairs, specifically designed to empower models with robust generalization capabilities for real-world UI scenarios. Furthermore, we establish an Optical Character Recognition (OCR)-based evaluation method to objectively assess restoration performance, particularly in text-rich UI images. Experimental results demonstrate that FESDNet-SwinT achieves state-of-the-art performance, with PSNR of 28.34, SSIM of 0.933, LPIPS of 0.044, and OCR accuracy of 90.4%. This comprehensive solution ensures high-quality image restoration while maintaining real-time performance, making it highly suitable for diverse UI automated testing applications.
 
@@ -33,24 +27,7 @@ Our implementation has been trained on NVIDIA 4080 GPU with cuda 11.8.
 
 ## Train and Test
 
-Once you have installed all dependencies, you can try a quick test:
-
-### 1. Download our dataset
-
-We provide our PC-Restore dataset, which can be downloaded through the following links:
-
-[Baidu Cloud Link](https://pan.baidu.com/s/1Wfr-Qza63XiGCg4a8HfOAA) Extraction Code: r6bz
-
-
-### 2. Download our pre-trained model
-
-We provide pre-trained models on PC-Restore datasets, which can be downloaded through the following links:
-
-[Baidu Cloud Link](https://pan.baidu.com/s/1ZPqJdgWGtkZY10nNeeQ_Ig) Extraction Code: upcp 
-
-After downloading the pre-trained model, you can place it in the `./out_dir/FESDNet_SwinT/exp_light/net_checkpoints/` directory.
-
-### 3. Train our dataset:
+### 1. Training
 
 Before running the `train.py`, make sure to modify the TRAIN_DATASET and TEST_DATASET paths in the pc_restore.yaml file to point to the correct dataset locations on your system. To train a model from scratch, simply run:
 
@@ -58,15 +35,15 @@ Before running the `train.py`, make sure to modify the TRAIN_DATASET and TEST_DA
 python train.py --config ./configs/pc_restore.yaml
 ```
 
-### 4. Test our dataset:
+### 2. Testing
 
-To evaluate our dataset, simply run:
+To evaluate dataset, simply run:
 
 ```cmd
 python test.py --config ./configs/pc_restore.yaml
 ```
 
-### 5. Test the images in a folder
+### 3. Test the images in a folder
 
 Change the configuration file `./demo_config/demo.yaml`, and then simply run:
 
@@ -96,6 +73,8 @@ python demo_test.py --config ./demo_config/demo.yaml
 | SRN-DeblurNet    | Image Deblurring | 22.56     | 0.861     | 0.157      | 14.91 ms | 108.66 G  | 10.25 M    | 5        | 0.683  |
 | DeblurGanv2 | Image Deblurring | 16.65     | 0.658     | 0.172      | 20.65 ms | 25.61 G  | 5.09 M | 3       | 0.438        |
 | MISCFilter | Image Deblurring | 24.31 | 0.875 | 0.082 | 53.42 ms | 2.34 G   | 15.99 M | 8 | 0.891 |
+| MambaIRv2 | Mamba-based Image Restoration | 19.68 | 0.718 | 0.319 | 809.60 ms | 925.57 G | 15.20 M | 3 | 0.343 |
+| DiffIR | Diffusion-based Image Restoration | 25.83 | 0.901 | 0.049 | 70.55 ms | 46.45 G | 25.02 M | 8 | 0.893 |
 | FESDNet-SwinT (Ours)            | Comprehensive Image Restoration | 28.34 | 0.933 | 0.044  | 17.59 ms | 19.10 G  | 6.52 M     | 9    | 0.904         |
 
 ### Subjective results
@@ -180,6 +159,22 @@ python demo_test.py --config ./demo_config/demo.yaml
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   pages={25595--25605},
   year={2024}
+}
+
+@inproceedings{guo2025mambairv2,
+  title={Mambairv2: Attentive state space restoration},
+  author={Guo, Hang and Guo, Yong and Zha, Yaohua and Zhang, Yulun and Li, Wenbo and Dai, Tao and Xia, Shu-Tao and Li, Yawei},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={28124--28133},
+  year={2025}
+}
+
+@inproceedings{xia2023diffir,
+  title={Diffir: Efficient diffusion model for image restoration},
+  author={Xia, Bin and Zhang, Yulun and Wang, Shiyin and Wang, Yitong and Wu, Xinglong and Tian, Yapeng and Yang, Wenming and Van Gool, Luc},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={13095--13105},
+  year={2023}
 }
 ```
 
